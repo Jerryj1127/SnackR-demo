@@ -1,11 +1,10 @@
 import React, { useRef } from 'react';
 import { View, Text, Animated, StyleSheet } from 'react-native';
 
-const Coins = ({ coins }) => {
-  const scaleAnim = useRef(new Animated.Value(1)).current;
+const Coins = ({ coins, scaleAnim }) => { 
 
   return (
-    <Animated.View style={[styles.coinContainer, { transform: [{ scale: scaleAnim }] }]}>
+    <Animated.View style={[styles.coinContainer, { transform: [{ scale: scaleAnim }] }]}> 
       <Text style={styles.coinText}>💰 {coins}</Text>
     </Animated.View>
   );

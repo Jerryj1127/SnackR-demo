@@ -15,13 +15,12 @@ const App = () => {
   const [coins, setCoins] = useState(0);
   const [showConfetti, setShowConfetti] = useState(false);
 
-  const scaleAnim = useRef(new Animated.Value(1)).current;
-  const buttonScaleAnim = useRef(new Animated.Value(1)).current;
+  const coinScaleAnim = useRef(new Animated.Value(1)).current;
 
   useEffect(() => {
-    NotificationService.initialize().then(() => {
-      NotificationService.scheduleDailyNotification();
-    });
+    // NotificationService.initialize().then(() => {
+    //   NotificationService.scheduleDailyNotification();
+    // });
     
     const fetchCoins = async () => {
       try {
@@ -35,35 +34,31 @@ const App = () => {
     fetchCoins();
   }, []);
 
-  const animateButton = () => {
-    Animated.sequence([
-      Animated.timing(buttonScaleAnim, { toValue: 1.1, duration: 100, useNativeDriver: true }),
-      Animated.timing(buttonScaleAnim, { toValue: 0.95, duration: 100, useNativeDriver: true }),
-      Animated.timing(buttonScaleAnim, { toValue: 1, duration: 150, useNativeDriver: true }),
-    ]).start();
-  };
-
   useEffect(() => {
     const updateCoins = async () => {
+      //ensuring coins are rewarded only once on the 7th day
       const wasRewarded = await getStorageItem("reward") || false;
       
       if (!wasRewarded) {
+        // Animation for Coin containcer
+        Animated.sequence([
+          Animated.timing(coinScaleAnim, { toValue: 1.5, duration: 100, useNativeDriver: true }),
+          Animated.timing(coinScaleAnim, { toValue: 0.8, duration: 100, useNativeDriver: true }),
+          Animated.timing(coinScaleAnim, { toValue: 1.2, duration: 150, useNativeDriver: true }),
+          Animated.timing(coinScaleAnim, { toValue: 1, duration: 150, useNativeDriver: true }),
+        ]).start();
         await incrementCoinCount(100);
         const updatedCoins = await getCoinCount();
         setCoins(updatedCoins);
         await setStorageItem("reward", true);
+      } else if (wasRewarded && (streak!==7)) {
+          await setStorageItem("reward", false)
       }
     };
+    
 
     if (streak === 7) {
       setShowConfetti(true);
-      Animated.sequence([
-        Animated.timing(scaleAnim, { toValue: 1.5, duration: 100, useNativeDriver: true }),
-        Animated.timing(scaleAnim, { toValue: 0.8, duration: 100, useNativeDriver: true }),
-        Animated.timing(scaleAnim, { toValue: 1.2, duration: 150, useNativeDriver: true }),
-        Animated.timing(scaleAnim, { toValue: 1, duration: 150, useNativeDriver: true }),
-      ]).start();
-      
       updateCoins();
     }
 
@@ -74,7 +69,7 @@ const App = () => {
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.topBar}>
         <UserOverview /> 
-        <Coins coins={coins} /> 
+        <Coins coins={coins} scaleAnim={coinScaleAnim} /> 
       </View>
 
       <StreakDisplay /> 
