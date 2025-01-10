@@ -18,9 +18,9 @@ const App = () => {
   const coinScaleAnim = useRef(new Animated.Value(1)).current;
 
   useEffect(() => {
-    // NotificationService.initialize().then(() => {
-    //   NotificationService.scheduleDailyNotification();
-    // });
+    NotificationService.initialize().then(() => {
+      NotificationService.scheduleDailyNotification();
+    });
     
     const fetchCoins = async () => {
       try {
@@ -41,13 +41,16 @@ const App = () => {
       
       if (!wasRewarded) {
         // Animation for Coin containcer
+        
         Animated.sequence([
-          Animated.timing(coinScaleAnim, { toValue: 1.5, duration: 100, useNativeDriver: true }),
-          Animated.timing(coinScaleAnim, { toValue: 0.8, duration: 100, useNativeDriver: true }),
-          Animated.timing(coinScaleAnim, { toValue: 1.2, duration: 150, useNativeDriver: true }),
-          Animated.timing(coinScaleAnim, { toValue: 1, duration: 150, useNativeDriver: true }),
-        ]).start();
+          Animated.timing(coinScaleAnim, { toValue: 1.4, duration: 70, useNativeDriver: true }),
+          Animated.timing(coinScaleAnim, { toValue: 1.2, duration: 800, useNativeDriver: true }),
+          Animated.timing(coinScaleAnim, { toValue: 1, duration: 100, useNativeDriver: true }),
+          Animated.timing(coinScaleAnim, { toValue: 1.2, duration: 100, useNativeDriver: true }),
+          Animated.timing(coinScaleAnim, { toValue: 1, duration: 100, useNativeDriver: true }),
+        ]).start();      
         await incrementCoinCount(100);
+
         const updatedCoins = await getCoinCount();
         setCoins(updatedCoins);
         await setStorageItem("reward", true);
@@ -59,7 +62,9 @@ const App = () => {
 
     if (streak === 7) {
       setShowConfetti(true);
+      setTimeout(()=>{
       updateCoins();
+      },2000);
     }
 
     
