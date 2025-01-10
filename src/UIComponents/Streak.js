@@ -13,16 +13,24 @@ export const streakMessages = [
   "Five days straight! \nYou're a streak master \n Day 5 unlocked! 🏆",
   "Six days of awesomeness!\n Your streak is legendary \nDay 6 achieved! 💪",
   "One whole week! You've reached a milestone Day 7 streak complete! 🌈✨  \n\n You are rewarded 100 coins",
-  "Good work soldier! \n Continue the streak for more exicitng rewards 🙌"
+  "Good work soldier! \n Continue the streak for more exiciting rewards 🙌"
 ]
 
 
 const StreakDisplay = () => {
   const { streak } = useContext(StreakContext);
+  let temp;
+  // edge cases
+  if (0 <= streak && streak <= 8){
+    temp = streak;  
+  } else if (streak > 8) { 
+    temp = 8;
+  } else {
+    temp = 0 }
 
   return (
     <View style={styles.streakContainer}>
-      <Text style={styles.streakText}>{streakMessages[streak]}</Text>
+      <Text style={styles.streakText}>{streakMessages[temp]}</Text>
     </View>
   );
 };

@@ -1,4 +1,9 @@
-# **SnackR Feature Demo**
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/icons/snackr.png" alt="Icon"  />
+  <h1 style="text-align: center;">SnackR Feature Demo</h1>
+</p>
+
+****
 
 ---
 
@@ -10,13 +15,13 @@ SnackR demo app to implement the user streak functionality
 
 ## **Table of Contents**
 
-1. [Overview](#-overview)  
-2. [Features implemented](#-features)  
-3. [Assumptions made](#-assumptions)  
-4. [Approach taken](#-approach)  
-5. [Local Installation](#-installation)  
-6. [Screenshots](#-screenshots)  
-7. [Recordings](#-recordings)   
+1. [Overview](#overview)  
+2. [Features implemented](#features)  
+3. [Assumptions made](#assumptions)  
+4. [Approach taken](#approach)  
+5. [Local Installation](#installation)  
+6. [Screenshots](#screenshots)  
+7. [Recordings](#recordings)   
 
 ---
 
@@ -105,3 +110,37 @@ npm install
 npx expo start
 
 ```
+## **Screenshots**
+
+> Notification System:
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/noficationPermisson.jpg" alt="notification Permission" width="300" />
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/notification.jpg" alt="Notification" width="300" />
+</p>
+
+---
+>Screenshots of UI:
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day1.jpg" alt="Screenshot 1" width="300" />
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day2.jpg" alt="Screenshot 2" width="300" />
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day3.jpg" alt="Screenshot 3" width="300" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day4.jpg" alt="Screenshot 4" width="300" />
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day5.jpg" alt="Screenshot 5" width="300" />
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day6.jpg" alt="Screenshot 6" width="300" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day7.jpg" alt="Screenshot 7" width="300" />
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day8.jpg" alt="Screenshot 8" width="300" />
+</p>
+
+
+## **recordings**
+
+<p align="center">
+<video src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/videos/Day7.mp4" controls height="600" align="center">
+</video>
+</p>
