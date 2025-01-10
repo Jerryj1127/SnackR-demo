@@ -97,7 +97,6 @@ Installation steps:
 # Clone the repository
 git clone https://github.com/Jerryj1127/SnackR-demo.git 
 
-# Merge remote changes into your local 'main' branch
 cd SnackR-demo/ 
 
 # Install the Expo CLI globally
@@ -121,26 +120,27 @@ npx expo start
 ---
 >Screenshots of UI:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day1.jpg" alt="Screenshot 1" width="300" />
-  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day2.jpg" alt="Screenshot 2" width="300" />
-  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day3.jpg" alt="Screenshot 3" width="300" />
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day1.jpg" alt="Screenshot 1" width="200" />
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day2.jpg" alt="Screenshot 2" width="200" />
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day3.jpg" alt="Screenshot 3" width="200" />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day4.jpg" alt="Screenshot 4" width="300" />
-  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day5.jpg" alt="Screenshot 5" width="300" />
-  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day6.jpg" alt="Screenshot 6" width="300" />
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day4.jpg" alt="Screenshot 4" width="200" />
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day5.jpg" alt="Screenshot 5" width="200" />
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day6.jpg" alt="Screenshot 6" width="200" />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day7.jpg" alt="Screenshot 7" width="300" />
-  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day8.jpg" alt="Screenshot 8" width="300" />
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day7.jpg" alt="Screenshot 7" width="200" />
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day8.jpg" alt="Screenshot 8" width="200" />
+  <img src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/images/Day0.jpg" alt="Screenshot Error" width="200" />
 </p>
 
 
 ## **recordings**
 
 <p align="center">
-<video src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/videos/Day7.mp4" controls height="600" align="center">
+<video src="https://raw.githubusercontent.com/Jerryj1127/SnackR-demo/main/docs/videos/Day7.mp4" controls height="600" >
 </video>
 </p>

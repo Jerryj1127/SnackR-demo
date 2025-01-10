@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, useContext } from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView, Animated, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, SafeAreaView, Animated } from 'react-native';
 import ConfettiCannon from 'react-native-confetti-cannon';
 import { StreakContext , StreakProvider} from './src/streakTracker';
 import { getCoinCount, incrementCoinCount } from './src/CoinTracker';
@@ -54,17 +54,23 @@ const App = () => {
         const updatedCoins = await getCoinCount();
         setCoins(updatedCoins);
         await setStorageItem("reward", true);
-      } else if (wasRewarded && (streak!==7)) {
-          await setStorageItem("reward", false)
-      }
-    };
-    
+      } };
+      
+    const updateRewardCounter = async () => {
+      const wasRewarded = await getStorageItem("reward") || false;
+      if (wasRewarded) {
+        await setStorageItem("reward", false)
+      } 
+    }
+
 
     if (streak === 7) {
       setShowConfetti(true);
       setTimeout(()=>{
       updateCoins();
       },2000);
+    } else {
+      updateRewardCounter()
     }
 
     
