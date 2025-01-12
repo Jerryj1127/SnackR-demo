@@ -20,9 +20,8 @@ export const incrementCoinCount = async (amount) => {
 export const decrementCoinCount = async (amount) => {
   const coins = await getCoinCount();
   if (amount > coins) {
-    console.error("Insufficient coins")
+    throw new Error("Insufficient coins");
     //Handle Insufficient coins
-    return false;
   }
   const newCount = coins - amount; 
   await setStorageItem(COINS_KEY, newCount);

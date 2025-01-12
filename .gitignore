@@ -40,3 +40,6 @@ test.js
 
 # IDE
 .vscode
+
+
+*.txt

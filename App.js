@@ -55,7 +55,7 @@ const App = () => {
         setCoins(updatedCoins);
         await setStorageItem("reward", true);
       } };
-      
+
     const updateRewardCounter = async () => {
       const wasRewarded = await getStorageItem("reward") || false;
       if (wasRewarded) {
@@ -65,11 +65,14 @@ const App = () => {
 
 
     if (streak === 7) {
+      console.log("streak is 7")
       setShowConfetti(true);
       setTimeout(()=>{
       updateCoins();
       },2000);
-    } else {
+    }                   // not 1 because its the initial value --> causing a render
+    else if (streak>1){ // it doesnt matter when the streak gets reset as long as its  1<streak<7<streak
+      console.log("streak is not 7", streak)    
       updateRewardCounter()
     }
 
